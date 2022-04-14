@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-12 main-article">
+        <p-card>
+            <h2>{{headlineNews.title}}</h2>
+            <img class="card-img-top"
+                src="{{headlineNews.imageUrl}}"
+                alt="Image main article" />
+            <p style="font-size:14px; font-weight: 300;">published on {{headlineNews.dateCreated  | date:'MMM d, y, h:mm:ss a'}}</p>
+            <button id="read-article-btn" class="btn btn-danger" (click)="navigateToArticle(headlineNews.id)">Read the
+                Article</button>
+        </p-card>
+    </div>
+    <div *ngFor="let news of allNewsReports" class="col-4">
+        <p-card>
+            <h4>{{news.title}}</h4>
+            <img class="card-img-top"
+                src="{{news.imageUrl}}"
+                alt="Image main article" />
+            <p style="font-size:14px; font-weight: 300;">published on {{news.dateCreated | date:'MMM d, y, h:mm:ss a'}}</p>
+            <button id="read-article-btn" class="btn btn-danger" (click)="navigateToArticle(news.id)">Read the
+                Article</button>
+        </p-card>
+    </div>
+</div>

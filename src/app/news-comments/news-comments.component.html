@@ -1,0 +1,19 @@
+<p-card *ngIf="commentsUnavailable">
+    <h4>Comments:</h4>
+    <p style="color:rgb(237, 100, 100)"><em>Comments currently unavaialbe.</em></p>
+</p-card>
+<p-card *ngIf="!commentsUnavailable">
+    <h4>Comments:</h4>
+    <p><em>Please note: You must be logged in to the website in order to post</em></p>
+    <textarea pInputTextarea [(ngModel)]="comment" [rows]="3" [cols]="80" [disabled]="!authService.isAuthenticated"></textarea>
+    <br/>
+    <button [disabled]="!authService.isAuthenticated" class="btn btn-success float-right" (click)="submitComment()">Post comment</button>
+    <br/>
+    <hr>
+    <div *ngFor="let item of listComments">
+        <p style="color:cornflowerblue">{{item.createdBy}}</p>
+        <p style="font-size:12px; font-weight: 300;">posted on {{item.dateCreated | date:'MMM d, y, h:mm:ss a'}}</p>
+        <p><span class="badge badge-light" style="font-size:16px; font-weight: 300;">{{item.description}}</span></p>
+        <hr>
+    </div>
+</p-card>

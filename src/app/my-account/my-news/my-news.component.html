@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-12 padding-10">
+        <h5>Publish a news report:</h5>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-success float-center" (click)="editNewsReport()">Publish</button>
+        <hr>
+    </div>
+    <div class="col-12 padding-10">
+        <h5>Manage your news reports:</h5>
+        <p-card class="news-card padding-10" *ngFor="let news of myNewsReports">
+            
+            <h4>{{news.title}}</h4>
+            <p class="label-small">Date created: {{news.dateCreated | date:'MMM d, y, h:mm:ss a'}}</p>
+            <p class="label-small">Last modified: {{news.lastModified | date:'MMM d, y, h:mm:ss a'}}</p>
+            <p class="label-small">Status: <span class="badge badge-primary" [ngClass]="{'badge-danger' : news.status == 'deleted'}">{{news.status}}</span></p>
+        
+        <div class="padding-10">
+            <button class="btn btn-outline-primary float-right" style="margin-left: 10px" (click)="editNewsReport(news.id)">Edit</button>
+            <button class="btn btn-outline-danger float-right" *ngIf="news.status !== 'deleted'" (click)="deleteNewsReport(news.id)">Delete</button>
+            <button class="btn btn-success float-right" *ngIf="news.status !== 'published'" (click)="publishNewsReport(news)">Publish</button>
+        </div>
+    </p-card>
+    </div>
+</div>

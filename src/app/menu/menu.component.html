@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/news/world">
+    <img src="../../assets/images/logo.png" width="150" height="50" alt="Rapid News Media">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/news/world">World</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/news/sport">Sport</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/news/business-lifestyle">Business & Lifestyle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/news/tech-science">Tech & Science</a>
+      </li>
+    </ul>
+
+    <div *ngIf="!authService.isAuthenticated" class="signin-form form-inline">
+      <input class="signin-form-control" type="input" placeholder="Username" aria-label="Username"
+        [(ngModel)]="username">
+      <input class="signin-form-control" type="password" placeholder="Password" aria-label="Password"
+        [(ngModel)]="password">
+      <button class="btn btn-outline-success btn-sm signin-form-btn" type="button" (click)="signIn()">Sign in</button>
+    </div>
+    <div *ngIf="authService.isAuthenticated">Welcome {{authService.authUser.firstname}}
+      {{authService.authUser.lastname}} !
+      <button class="btn btn-outline-danger btn-sm signin-form-btn" type="button" (click)="signOut()">Sign out</button>
+    </div>
+  </div>
+
+
+
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col mt-3" style="text-align: right;">
+      <button *ngIf="!authService.isAuthenticated" class="btn btn-outline-primary" type="button" (click)="showDialog()">Register today</button>
+      <button *ngIf="authService.isAuthenticated" class="btn btn-outline-dark" type="button" (click)="goToMyAccount()">My Account</button>
+    </div>
+
+  </div>
+</div>
+<p-dialog header="Create Your Account" [(visible)]="displayRegister" modal="true">
+  <div class="container">
+  <div class="row">
+    <div class="col offset-4" style="padding: 15px;">
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="newUser.firstname">
+        <label for="float-input">Firstname</label>
+      </span>
+    </div>
+    <div class="col offset-4" style="padding: 15px;">
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="newUser.lastname">
+        <label for="float-input">Lastname</label>
+      </span>
+    </div>
+    <div class="col offset-4" style="padding: 15px;">
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="newUser.email">
+        <label for="float-input">Email address</label>
+      </span>
+    </div>
+    <div class="col offset-4" style="padding: 15px;">
+      <span class="p-float-label">
+        <input id="float-input" type="password" pInputText [(ngModel)]="newUser.password">
+        <label for="float-input">Password</label>
+      </span>
+    </div>
+    <div class="col-12"  style="padding: 15px; text-align: center;">
+      <button class="btn btn-outline-primary" type="button" (click)="signUp()">Register</button>
+    </div>
+
+  </div>
+</div>
+</p-dialog>

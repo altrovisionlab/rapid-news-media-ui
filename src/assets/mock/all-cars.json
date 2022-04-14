@@ -1,0 +1,130 @@
+{
+  "Audi": { "count": 4, "models": { "A3": 1, "A6": 3 } },
+  "BMW": {
+    "count": 5,
+    "models": { "2 Series": 2, "3 Series": 1, "4 Series": 1, "5 Series": 1 }
+  },
+  "Citroen": {
+    "count": 8,
+    "models": {
+      "Berlingo": 1,
+      "C3": 1,
+      "C4": 3,
+      "C4 Picasso": 2,
+      "Spacetourer": 1
+    }
+  },
+  "Dacia": { "count": 6, "models": { "Duster": 2, "Logan": 1, "Sandero": 3 } },
+  "Fiat": { "count": 3, "models": { "500": 2, "Tipo": 1 } },
+  "Ford": {
+    "count": 9,
+    "models": {
+      "Fiesta": 1,
+      "Focus": 2,
+      "Kuga": 1,
+      "Mondeo": 1,
+      "S-Max": 2,
+      "Tourneo Connect": 1,
+      "Transit": 1
+    }
+  },
+  "Honda": { "count": 4, "models": { "Civic": 2, "CR-V": 1, "Jazz": 1 } },
+  "Hyundai": {
+    "count": 19,
+    "models": {
+      "i10": 2,
+      "i20": 1,
+      "i30": 3,
+      "i40": 2,
+      "ix20": 3,
+      "ix35": 2,
+      "Kona": 3,
+      "Tucson": 3
+    }
+  },
+  "Infiniti": { "count": 1, "models": { "Q30": 1 } },
+  "Isuzu": { "count": 1, "models": { "D-Max": 1 } },
+  "Jeep": { "count": 1, "models": { "Cherokee": 1 } },
+  "Kia": { "count": 3, "models": { "ceed": 1, "Sorento": 1, "Venga": 1 } },
+  "Lexus": { "count": 1, "models": { "CT": 1 } },
+  "Mazda": { "count": 5, "models": { "2": 2, "6": 3 } },
+  "Mercedes-Benz": {
+    "count": 4,
+    "models": { "A-Class": 1, "C-Class": 2, "E-Class": 1 }
+  },
+  "MINI": { "count": 2, "models": { "Cooper": 1, "ONE": 1 } },
+  "Mitsubishi": {
+    "count": 6,
+    "models": { "ASX": 1, "ECLIPSE": 1, "Outlander": 4 }
+  },
+  "Nissan": {
+    "count": 21,
+    "models": {
+      "Juke": 1,
+      "Leaf": 5,
+      "Micra": 4,
+      "N/A": 1,
+      "Note": 1,
+      "Pulsar": 2,
+      "Qashqai": 5,
+      "X-Trail": 2
+    }
+  },
+  "Opel": {
+    "count": 15,
+    "models": {
+      "Astra": 3,
+      "Corsa": 1,
+      "GRANDLAND X": 2,
+      "Insignia": 6,
+      "MOKKA": 2,
+      "Zafira": 1
+    }
+  },
+  "Peugeot": {
+    "count": 7,
+    "models": { "2008": 2, "208": 1, "3008": 3, "308": 1 }
+  },
+  "Renault": {
+    "count": 60,
+    "models": {
+      "Captur": 8,
+      "Clio": 3,
+      "Grand Scenic": 11,
+      "KADJAR": 10,
+      "Koleos": 2,
+      "Megane": 16,
+      "Scenic": 9,
+      "ZOE": 1
+    }
+  },
+  "SEAT": { "count": 27, "models": { "Alhambra": 1, "Ateca": 1, "Leon": 25 } },
+  "Skoda": { "count": 7, "models": { "OCTAVIA": 3, "RAPID": 2, "SUPERB": 2 } },
+  "Suzuki": { "count": 4, "models": { "Alto": 1, "Swift": 1, "Vitara": 2 } },
+  "Toyota": {
+    "count": 23,
+    "models": {
+      "Auris": 5,
+      "Avensis": 2,
+      "AYGO": 5,
+      "C-HR": 3,
+      "Prius": 4,
+      "RAV4": 2,
+      "Yaris": 2
+    }
+  },
+  "Vauxhall": { "count": 2, "models": { "Astra": 1, "Mokka": 1 } },
+  "Volkswagen": {
+    "count": 12,
+    "models": {
+      "Caddy": 1,
+      "Golf": 2,
+      "Jetta": 1,
+      "Passat": 4,
+      "Polo": 2,
+      "Scirocco": 1,
+      "Tiguan": 1
+    }
+  },
+  "Volvo": { "count": 7, "models": { "S60": 2, "V40": 3, "XC60": 2 } }
+}

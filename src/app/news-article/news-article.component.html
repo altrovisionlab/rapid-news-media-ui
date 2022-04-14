@@ -1,0 +1,17 @@
+<div class="row">
+        <div class="col-12 main-article">
+            <p-card>
+                <h2>{{newsReport.title}}</h2>
+                <img class="card-img-top"
+                    src="{{newsReport.imageUrl}}"
+                    alt="Image main article" />
+                    <p style="font-size:14px; font-weight: 300;">published on {{newsReport.dateCreated | date:'MMM d, y, h:mm:ss a'}}</p>
+                    <p style="font-size:14px; font-weight: 300;">author: {{newsReport.createdBy}}</p>
+                <p>{{newsReport.description}}</p>
+            </p-card>
+        </div>
+        <div class="col-12 main-article" style="padding-top: 20px;">
+            <app-news-comments [newsReportId]="newsReportId"></app-news-comments>
+        </div>
+        
+</div>

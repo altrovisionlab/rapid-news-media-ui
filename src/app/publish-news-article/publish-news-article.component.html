@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-12">
+        <h2>Publish News Article</h2>
+    <br/>
+    </div>
+    <div class="col">
+        <h5>Choose a Category for the News Report</h5>
+      <p-dropdown [options]="allNewsCategories" [(ngModel)]="selectedNewsCategory" optionLabel="label"
+        placeholder="Select a News Category" [showClear]="true"></p-dropdown>
+        <hr>
+        <h5>Title of your news</h5>
+        <input type="text" pInputText [(ngModel)]="articleTitle" style="width: 80%;">
+        <hr>
+        <h5>Description of your news</h5>
+        <textarea pInputTextarea [(ngModel)]="articleText" [rows]="5" [cols]="100"></textarea>
+
+        <h5>Upload image</h5>
+        <p-fileUpload #fileInput mode="basic" name="file" url="{{uploadImgApi}}" accept="image/*" maxFileSize="1000000"
+            (onUpload)="fetchImage($event)" [auto]="true">
+        </p-fileUpload>
+        <img *ngIf="imageUrl" class="card-img-top" src="{{imageUrl}}" alt="News Report Image" />
+
+    </div>
+    <div class="col col-4 offset-8" style="padding: 15px">
+        <button id="show-more-btn" class="btn btn-success float-right" (click)="publishNewsReport()">Publish</button>
+    </div>
+
+</div>
