@@ -61,6 +61,11 @@ export class AuthService {
   }
 
   getAuthorizationToken() {
-    return "Bearer " + this.authToken;
+    if(this.authToken != undefined){
+      return "Bearer " + this.authToken;
+    } else {
+      return null;
+    }
+    
   }
 }
